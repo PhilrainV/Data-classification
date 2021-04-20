@@ -172,10 +172,10 @@ def calcAUC_byRocArea(labels,preds):
 
 def main():
     # 读取训练样本数据并且进行样本划分
-    dataset, labelset = loaddataset("E:\Python\Project\成绩预测网络\实验/10万.csv")
+    dataset, labelset = loaddataset("10万.csv")
     dataset = dataset[:,1:]
     # 读取测试样本数据并且进行样本划分
-    dataset1, labelset1 = loaddataset("E:\Python\Project\成绩预测网络\实验\简单数据.csv")
+    dataset1, labelset1 = loaddataset("简单数据.csv")
     dataset1 = dataset1[:, 1:]
     # 得到初始化的待估参数的值
     weight1, weight2, value1, value2 = parameter_initialization(len(dataset[0]), len(dataset[0]), 1)
